@@ -1,0 +1,22 @@
+﻿<h1>Hi {{currentUser[0].name}}!</h1>
+<p>You're logged in with Avinash</p>
+<h3>All registered users:</h3>
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+     
+      <td>{{ user.email }}</td>
+      <td>{{ user.name  }}</td>
+    </tr>
+    </tbody>
+  </table>
